@@ -44,7 +44,6 @@ public class ConsumerController {
 
 	@PutMapping(value = "/avengers/{id}")
 	public void updateAvenger(@PathVariable String id, @RequestParam(value = "name") String name) {
-		System.out.println("Passing id: " + id + " , name: " + name);
 		webClient
 		.put()
 		.uri(
@@ -67,7 +66,6 @@ public class ConsumerController {
 
 	@PostMapping(value = "/avengers")
 	public void createAvengers(@RequestBody HashMap<String, String> requestMap) {
-		System.out.println("Request Map: " + requestMap);
 		webClient
 		.post()
 		.uri("/avengers/")
